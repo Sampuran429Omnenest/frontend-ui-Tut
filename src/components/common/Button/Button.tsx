@@ -4,19 +4,18 @@ interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
 }
-
 export const Button = ({
   children,
   variant = "secondary",
   disabled,
   onClick,
 }: ButtonProps) => {
-  const base = "w-full py-2 rounded-md text-sm font-medium";
+  const base = "px-4 py-2 rounded-md font-semibold transition-colors duration-200 flex items-center justify-center";
 
   const styles = {
-    buy: "bg-green-600 hover:bg-green-700 text-white",
-    sell: "bg-red-600 hover:bg-red-700 text-white",
-    secondary: "bg-gray-800 hover:bg-gray-700 text-white",
+    buy: "bg-[#198055] hover:bg-[#146945] text-white text-base",
+    sell: "bg-[#D12F2F] hover:bg-[#A82525] text-white text-base",
+    secondary: "bg-transparent hover:bg-gray-50 text-[#0F62FE] text-xs",
   };
 
   return (
